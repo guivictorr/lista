@@ -21,7 +21,10 @@ function renderList(){
     lista.innerHTML = "";
     for(task of array){
         const taskElement = document.createElement("li");
+        const taskCheck   = document.createElement("input");
+        taskCheck.setAttribute("type", "checkbox");
         const text = document.createTextNode(task);
+        taskElement.appendChild(taskCheck);
         taskElement.appendChild(text);
         lista.appendChild(taskElement);
     }
