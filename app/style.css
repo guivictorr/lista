@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+.container-input button{
+    margin-top: 4px;
+}
+.container-input input{
+
+}
+.container-main{
+    margin-top: 10px;
+}
+
+.container-main li{
+    display: flex;
+    align-items: center;
+}
+.container-main p{
+    margin-left: 4px;
+}
+.container-main li > input[type=checkbox]:checked + p{
+    text-decoration: line-through;
+}
+
+
