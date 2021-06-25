@@ -20,12 +20,17 @@ function add(){
 function renderList(){
     lista.innerHTML = "";
     for(task of array){
-        const taskElement = document.createElement("li");
-        const taskCheck   = document.createElement("input");
-        taskCheck.setAttribute("type", "checkbox");
-        const text = document.createTextNode(task);
-        taskElement.appendChild(taskCheck);
-        taskElement.appendChild(text);
-        lista.appendChild(taskElement);
+        createTask(task);
     }
+}
+function createTask(task){
+    const taskElement = document.createElement("li");
+    const taskCheck   = document.createElement("input");
+    taskCheck.setAttribute("type", "checkbox");
+    const taskParagraph = document.createElement("p");
+    const text = document.createTextNode(task);
+    taskElement.appendChild(taskCheck);
+    taskParagraph.appendChild(text)
+    taskElement.appendChild(taskParagraph);
+    lista.appendChild(taskElement);
 }
